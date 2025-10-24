@@ -1,20 +1,64 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="vierport" content="width=device-width, initial-scale=1.0">
-  <title>Boleto</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Para Você</title>
   <style>
     body {
-      font-family; Arial, sans-serif;
+      background-color: #000;
+      color: #ff0033; /* vermelho romântico/vibrante */
+      font-family: 'Georgia', serif;
       text-align: center;
-      padding: 50px;
-      backgroud-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      overflow: hidden;
     }
-  </sytile>
+
+    h1 {
+      font-size: 1.8em;
+      margin-top: 30px;
+      letter-spacing: 1px;
+      text-shadow: 0 0 10px rgba(255, 0, 51, 0.5);
+    }
+
+    .barcode-container {
+      margin: 40px auto;
+      max-width: 300px;
+    }
+
+    .barcode {
+      width: 100%;
+      height: auto;
+      border: 2px solid #ff0033;
+      border-radius: 4px;
+      box-shadow: 0 0 15px rgba(255, 0, 51, 0.4);
+    }
+
+    p {
+      font-size: 1.4em;
+      margin-top: 20px;
+      padding: 0 20px;
+      line-height: 1.5;
+    }
+  </style>
 </head>
 <body>
-  <h1> Aqui voce tira sua 2a via de pagamento de boleto.</h1>
-  <p> Boleto Grátis </p>
+  <div class="barcode-container">
+    <!-- Imagem de código de barras genérico (você pode substituir depois) -->
+    <img 
+      src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=Te%20amo%20para%20sempre.%20Quer%20casar%20comigo%3F%20❤️" 
+      alt="Código de barras romântico" 
+      class="barcode"
+    />
+  </div>
+
+  <h1>Faça a leitura do código de barras</h1>
+  <p>...e descubra o que meu coração quer te dizer.</p>
 </body>
 </html>
